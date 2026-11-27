@@ -1,0 +1,101 @@
+:root{--ink:#142d37;--dark:#102b34;--teal:#276963;--gold:#f2ce89;--paper:#f5f7f4;--line:#d4dfdb;--muted:#465e62;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:1rem/1.65 "Segoe UI",Arial,sans-serif}
+a{color:#22645d;text-underline-offset:.22em}
+button,select,textarea{font:inherit}
+h1,h2,h3,p{margin:0 0 1rem}
+h1,h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.045em;line-height:1.04}
+h1{font-size:clamp(3.2rem,6.5vw,6rem);margin-bottom:1.5rem}
+h2{font-size:clamp(2.35rem,4.4vw,4.15rem);margin-bottom:1.25rem}
+h3{font-size:1.25rem;line-height:1.28}
+p:last-child{margin-bottom:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #bd8134;outline-offset:4px}
+.wrap{width:min(1200px,calc(100% - 3rem));margin:auto}
+.section{padding:clamp(3.75rem,8vw,7.25rem) 0}
+.skip{position:absolute;left:1rem;top:-10rem;background:#fff;padding:.6rem;z-index:5}
+.skip:focus{top:1rem}
+.nav{min-height:5.3rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.brand{display:inline-flex;gap:.75rem;align-items:center;text-decoration:none;color:inherit;line-height:1;flex-shrink:0}
+.brand strong{font-size:2.1rem;letter-spacing:-.09em}
+.brand strong span{color:#33776c}
+.brand small{font-size:.77rem;letter-spacing:.11em;font-weight:750;border-left:1px solid #9babaa;padding-left:.75rem;line-height:1.18}
+nav{display:flex;gap:clamp(.85rem,2vw,2rem);align-items:center}
+nav a{color:var(--ink);text-decoration:none;font-weight:600}
+nav a:not(.button):hover{text-decoration:underline}
+.menu{display:none}
+.button{display:inline-block;text-decoration:none;border:1px solid transparent;border-radius:4px;padding:.72rem 1.15rem;font-weight:700;line-height:1.4;cursor:pointer}
+.button:hover{filter:brightness(.91)}
+.dark{background:var(--dark);color:#fff}
+.gold{background:var(--gold);color:#192f34}
+.outline{border-color:#d7e4e3;color:#fff;background:#10323a55}
+.hero{color:#fff;background:linear-gradient(90deg,rgba(12,37,46,.97) 3%,rgba(12,37,46,.83) 43%,rgba(12,37,46,.16) 100%),url('miami.webp') center 48%/cover,var(--dark)}
+.hero-inner{padding:clamp(4.75rem,10vw,9rem) 0;min-height:34rem}
+.hero em{color:var(--gold);font-weight:400}
+.eyebrow{text-transform:uppercase;letter-spacing:.15em;font-size:.875rem;font-weight:750;color:var(--teal);margin-bottom:1.05rem}
+.hero .eyebrow,.consult .eyebrow{color:var(--gold)}
+.lead{max-width:35rem;font-size:clamp(1.12rem,2vw,1.35rem);color:#e7efed}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.75rem}
+.proof{background:var(--paper);border-bottom:1px solid var(--line)}
+.proof .wrap{display:grid;grid-template-columns:repeat(3,1fr);padding:1.45rem 0;gap:1.2rem}
+.proof .wrap div+div{border-left:1px solid var(--line);padding-left:1.5rem}
+.proof strong,.proof span{display:block}
+.proof strong{font:1.55rem Georgia,serif;margin-bottom:.25rem}
+.proof span{color:var(--muted)}
+.intro{max-width:45rem;margin-bottom:2.2rem}
+.intro>p:last-child,.section p{max-width:66ch}
+.services{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);gap:1px;background:var(--line)}
+.services article{background:white;padding:clamp(1.3rem,3vw,2.25rem);border-top:3px solid #639288}
+.services p,.engagements p{color:var(--muted)}
+.approach{background:#eaf2ee}
+.split{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(2rem,7vw,7rem);align-items:center}
+.steps{padding-left:1.3rem;margin:1.2rem 0 0}
+.steps li{padding:.3rem 0 .3rem .35rem}
+.pillars{background:white;padding:clamp(1.4rem,4vw,3rem);box-shadow:0 12px 34px #233f3d13}
+.pillars ul{padding:0;margin:0;list-style:none}
+.pillars li{padding:.63rem 0;border-bottom:1px solid var(--line)}
+.pillars li:last-child{border:0}
+.engagements{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line);padding:0 1rem 0 1.15rem}
+summary{padding:1.1rem 2.25rem 1.1rem 0;cursor:pointer;position:relative;list-style:none;display:flex;align-items:baseline;justify-content:space-between;gap:.5rem 1.25rem;flex-wrap:wrap}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:0;font-size:1.45rem;color:var(--teal);top:.8rem}
+details[open] summary::after{content:"−"}
+summary strong{font-size:1.15rem}
+summary span{color:var(--muted)}
+details[open]{background:var(--paper);padding-bottom:1.15rem}
+.audience{background:var(--paper)}
+.audience .split>div+div{border-left:3px solid #639288;padding:1.3rem 0 1.3rem 1.65rem}
+.about{grid-template-columns:.65fr 1.35fr}
+.founder{min-height:16rem;display:grid;place-items:center;background:radial-gradient(circle,#234c53,#102b34 67%);color:#fff}
+.founder span{font-size:clamp(4rem,9vw,7rem);letter-spacing:-.1em;font-weight:750}
+.founder strong{color:var(--gold)}
+.consult{color:white;background:var(--dark)}
+.consult .contact a{color:var(--gold);font-weight:650;overflow-wrap:anywhere}
+form{display:grid;gap:.55rem}
+form label{font-weight:650}
+form select,form textarea{border:1px solid #8daba7;width:100%;background:white;color:var(--ink);padding:.65rem .8rem;border-radius:4px;margin-bottom:.55rem}
+form textarea{resize:vertical}
+form button{justify-self:start}
+#status:empty{display:none}
+.footer{display:grid;grid-template-columns:auto 1fr 1fr;align-items:center;gap:1rem 2rem;padding:2rem 0}
+.footer p{margin:0;color:var(--muted);font-size:.9rem}
+@media(max-width:850px){
+  .menu{display:block;color:var(--ink);background:white;border:1px solid var(--line);border-radius:4px;padding:.35rem .75rem}
+  .nav{flex-wrap:wrap;padding:.9rem 0;gap:.85rem}
+  nav{display:none;width:100%;align-items:flex-start;flex-direction:column;padding:.55rem 0;gap:.8rem}
+  nav.is-open{display:flex}
+  .services{grid-template-columns:repeat(2,1fr)}
+  .footer{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wrap{width:calc(100% - 2rem)}
+  .desktop{display:none}
+  .hero{background-image:linear-gradient(90deg,#0c252eec,#0c252e96),url('miami.webp')}
+  .hero-inner{min-height:auto}
+  .proof .wrap,.services,.split{grid-template-columns:1fr}
+  .proof .wrap div+div{border-left:0;border-top:1px solid var(--line);padding:.85rem 0 0}
+  .about{gap:1.65rem}
+  .founder{min-height:10rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
